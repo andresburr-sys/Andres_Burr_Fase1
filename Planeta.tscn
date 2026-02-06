@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b3sm5fmlrx6q2"]
+
+[ext_resource type="Texture2D" uid="uid://blm5xpyjvkv54" path="res://earth-11009_1280.jpg" id="1_q1dhb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_om1u1"]
+
+[node name="Node2D" type="Node2D" unique_id=1214840431]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=763213203]
+position = Vector2(176.6875, 353.1875)
+scale = Vector2(0.17392579, 0.18251956)
+texture = ExtResource("1_q1dhb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1029413288]
+shape = SubResource("CircleShape2D_om1u1")
