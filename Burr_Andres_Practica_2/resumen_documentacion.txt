@@ -1,0 +1,5 @@
+Resumen de Documentación Oficial
+
+Editor overview > El editor de Godot se compone de varias áreas de trabajo esenciales. El Viewport permite visualizar el juego, el Inspector sirve para modificar las propiedades matemáticas y visuales de los objetos, y el Panel de Escenas organiza la estructura actual, mientras que el Sistema de Archivos administra todos los recursos del proyecto.
+
+Conceptos de escena > Una escena en Godot es un conjunto de nodos organizados en forma de árbol (jerarquía) que se puede guardar en el disco. Las escenas funcionan como plantillas o "moldes" que pueden instanciarse dentro de otras escenas más grandes, lo que permite crear juegos modulares y organizados.

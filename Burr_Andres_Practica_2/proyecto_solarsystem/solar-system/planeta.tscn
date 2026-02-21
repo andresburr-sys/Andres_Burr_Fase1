@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cy3w3rmlhue4u"]
+
+[ext_resource type="Texture2D" uid="uid://cfph1lfr03ht" path="res://icon.svg" id="1_u18kc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8xq8f"]
+radius = 33.01515
+
+[node name="Planeta" type="Node2D" unique_id=843308633]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1273189126]
+modulate = Color(0.34901962, 0.93333334, 0.27058825, 1)
+position = Vector2(-1, -1)
+scale = Vector2(0.38671875, 0.3613281)
+texture = ExtResource("1_u18kc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1847868939]
+modulate = Color(0.4627451, 1, 0.4117647, 1)
+shape = SubResource("CircleShape2D_8xq8f")

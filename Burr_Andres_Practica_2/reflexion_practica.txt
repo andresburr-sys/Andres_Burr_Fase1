@@ -1,0 +1,7 @@
+Reflexión 
+Durante esta práctica, comprendí que la principal diferencia entre un nodo y una escena es que el nodo es la pieza básica de construcción, mientras que la escena es un conjunto de nodos agrupados y guardados para un propósito específico.
+
+Entendí que la jerarquía de nodos es vital porque los nodos hijos heredan las transformaciones de los padres; por ejemplo, al rotar el Sol, los planetas orbitan automáticamente sin necesidad de programar cada uno. Además, me quedó claro que mientras en el Viewport acomodamos los elementos de forma visual, es en el Inspector donde controlamos sus valores exactos y propiedades.
+
+Finalmente, descubrí que crear escenas reutilizables, como el planeta, tiene la gran ventaja de ahorrar tiempo.
+Si instancio el mismo planeta tres veces y luego decido cambiar su textura o tamaño en la escena original, los tres planetas se actualizarán automáticamente en la escena principal, haciendo el desarrollo mucho más eficiente y limpio.

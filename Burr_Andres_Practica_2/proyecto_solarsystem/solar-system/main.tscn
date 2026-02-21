@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bh8cqsu0he4y4"]
+
+[ext_resource type="Texture2D" uid="uid://dk7ev5v576s6b" path="res://sun_PNG13431.png" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cy3w3rmlhue4u" path="res://planeta.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://vad3oydal88q" path="res://sol.gd" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://do0ixsqkyfm6x" path="res://globe_PNG100093.png" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bblcjg1old04i" path="res://Saturn-PNG-Image.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cv3j5bvlnatdb" path="res://planet-mercury-on-transparent-background-created-with-generative-ai-png.webp" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cysp1dj36ddd4" path="res://Space-Free-PNG-Image.png" id="7_272bh"]
+
+[node name="SistemaSolar" type="Node2D" unique_id=1502953576]
+
+[node name="Fondo espacio" type="Sprite2D" parent="." unique_id=428763663]
+position = Vector2(422, 182)
+texture = ExtResource("7_272bh")
+
+[node name="sol" type="Sprite2D" parent="." unique_id=1353386040]
+modulate = Color(1, 0.5137255, 0.2627451, 1)
+position = Vector2(484.00003, 267)
+scale = Vector2(0.07478633, 0.08162031)
+texture = ExtResource("1_h2yge")
+script = ExtResource("2_h2yge")
+
+[node name="Timer" type="Timer" parent="sol" unique_id=1513944553]
+wait_time = 0.05
+autostart = true
+
+[node name="Orbitas" type="Node2D" parent="sol" unique_id=1155470010]
+position = Vector2(106.9707, -73.51099)
+scale = Vector2(14.938393, 14.740511)
+
+[node name="Planeta" parent="sol/Orbitas" unique_id=843308633 instance=ExtResource("2_0xm2m")]
+position = Vector2(19.692318, -155.42856)
+
+[node name="Sprite2D" parent="sol/Orbitas/Planeta" index="0" unique_id=1273189126]
+modulate = Color(1, 1, 1, 1)
+position = Vector2(3.5804267, -0.8311682)
+scale = Vector2(0.1396364, 0.13658485)
+texture = ExtResource("4_1bvp3")
+
+[node name="Planeta2" parent="sol/Orbitas" unique_id=871837471 instance=ExtResource("2_0xm2m")]
+position = Vector2(201.39859, 94.75326)
+
+[node name="Sprite2D" parent="sol/Orbitas/Planeta2" index="0" unique_id=1273189126]
+modulate = Color(1, 1, 1, 1)
+position = Vector2(0.00010204315, -4.1558943)
+scale = Vector2(0.08154166, 0.09459032)
+texture = ExtResource("5_lquwl")
+
+[node name="Planeta3" parent="sol/Orbitas" unique_id=533649670 instance=ExtResource("2_0xm2m")]
+position = Vector2(-213.03494, 32.41559)
+
+[node name="Sprite2D" parent="sol/Orbitas/Planeta3" index="0" unique_id=1273189126]
+modulate = Color(1, 1, 1, 1)
+position = Vector2(-5.4152697e-06, -0.8311653)
+scale = Vector2(0.06526806, 0.063592665)
+texture = ExtResource("6_7mycd")
+
+[connection signal="timeout" from="sol/Timer" to="sol" method="_on_timer_timeout"]
+
+[editable path="sol/Orbitas/Planeta"]
+[editable path="sol/Orbitas/Planeta2"]
+[editable path="sol/Orbitas/Planeta3"]
